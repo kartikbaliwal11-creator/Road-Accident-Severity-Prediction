@@ -15,4 +15,4 @@ pipeline {
         }
 
         stage('Run Monitoring
-        
+        git pull origin main --rebase
