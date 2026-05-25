@@ -14,5 +14,16 @@ pipeline {
 
         }
 
-        stage('Run Monitoring
-        git pull origin main --rebase
+        stage('Run Monitoring') {
+
+            steps {
+
+                bat 'python monitor.py'
+
+            }
+
+        }
+
+    }
+
+}
