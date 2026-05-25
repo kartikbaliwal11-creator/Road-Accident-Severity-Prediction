@@ -14,11 +14,21 @@ pipeline {
 
         }
 
-        stage('Run Monitoring') {
+        stage('Run Monitoring Script') {
 
             steps {
 
                 bat 'python monitor.py'
+
+            }
+
+        }
+
+        stage('Build Docker Image') {
+
+            steps {
+
+                bat 'docker build -t accident-prediction .'
 
             }
 
